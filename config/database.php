@@ -1,5 +1,7 @@
 <?php
-define('BASE_URL', '/HTDOCS/public');
+define('BASE_URL', '/');
+
+
 $host = 'localhost';
 $db   = 'zoshow';
 $user = 'root';

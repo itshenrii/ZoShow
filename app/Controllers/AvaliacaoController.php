@@ -1,2 +1,8 @@
 <?php
-class AvaliacaoController {}
+class AvaliacaoController
+{
+    public function index()
+    {
+        'app/Models/Avaliacao.php';
+    }
+}

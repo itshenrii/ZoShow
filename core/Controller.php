@@ -1,7 +1,10 @@
 <?php
-class Controller {
-    public function view($view, $data = []) {
+
+class Controller
+{
+    public function view($view, $data = [])
+    {
         extract($data);
-        require "../app/Views/$view.php";
+        require BASE_PATH . "/app/Views/{$view}.php";
     }
 }

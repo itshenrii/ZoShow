@@ -19,8 +19,10 @@ class Router
 
     private function normalize($uri)
     {
-        return rtrim($uri, '/') ?: '/';
+        $uri = '/' . trim($uri, '/');
+        return $uri;
     }
+
 
     public function dispatch($uri, $method)
     {
@@ -29,41 +31,31 @@ class Router
         if (isset($this->routes[$method][$uri])) {
             list($controllerName, $methodName) = explode('@', $this->routes[$method][$uri]);
 
-            $controllerPath = BASE_PATH . "/app/Controllers/{$controllerName}.php";
-
-            if (!file_exists($controllerPath)) {
-                die("Controller {$controllerName} não encontrado.");
-            }
-
-            require_once $controllerPath;
+            require_once BASE_PATH . "/app/Controllers/{$controllerName}.php";
 
             if (!class_exists($controllerName)) {
-                die("Classe {$controllerName} não definida.");
+                die("Erro: Controller {$controllerName} não encontrado.");
             }
 
             $controller = new $controllerName();
 
             if (!method_exists($controller, $methodName)) {
-                die("Método {$methodName} não encontrado no controller {$controllerName}.");
+                die("Erro: Método {$methodName} não encontrado em {$controllerName}.");
             }
 
             return call_user_func([$controller, $methodName]);
         }
 
-        http_response_code(404);
         echo "404 - Página não encontrada";
     }
 }
 
-//  Inicia o roteador
 $router = new Router();
-
-//  Carrega as rotas definidas
 require_once BASE_PATH . '/routes/web.php';
 
-//  Captura URI e método da requisição
 $requestUri = $_GET['url'] ?? '/';
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 
-//  Executa a rota correspondente
+
+
 $router->dispatch($requestUri, $requestMethod);
