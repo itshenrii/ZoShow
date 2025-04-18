@@ -4,6 +4,7 @@ error_reporting(E_ALL);
 
 define('BASE_PATH', realpath(__DIR__ . '/../'));
 
+// Autoload simples
 spl_autoload_register(function ($class) {
     $paths = [
         BASE_PATH . '/core/' . $class . '.php',
@@ -18,6 +19,9 @@ spl_autoload_register(function ($class) {
         }
     }
 });
+
+
+require_once BASE_PATH . '/config/database.php';
 
 
 require_once BASE_PATH . '/core/App.php';
