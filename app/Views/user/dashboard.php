@@ -1,1 +1,13 @@
-<h2>Dashboard Usuário</h2>
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+
+if (!isset($_SESSION['usuario'])) {
+    header('Location: /public/login');
+    exit;
+}
+?>
+
+<h2>Pagina do usuario</h2>

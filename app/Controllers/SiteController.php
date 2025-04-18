@@ -7,8 +7,16 @@ class SiteController
         require_once BASE_PATH . '/config/database.php';
         include BASE_PATH . '/app/Views/site/home.php';
     }
-    public function ping()
+
+    public function dashboarduser()
     {
-        echo "pong 🏓";
+        if (session_status() === PHP_SESSION_NONE) session_start();
+
+        if (!isset($_SESSION['usuario'])) {
+            header('Location: /public/login');
+            exit;
+        }
+
+        include BASE_PATH . '/app/Views/user/dashboard.php';
     }
 }
