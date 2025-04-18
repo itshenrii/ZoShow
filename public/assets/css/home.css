@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+.top-nav {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+}
+
+.top-nav-links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.top-nav-links a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.globo-com {
+    color: #1e4b9e;
+}
+
+.g1 {
+    color: #c4160c;
+}
+
+.ge {
+    color: #06aa48;
+}
+
+.gshow {
+    color: #ff8000;
+}
+
+.globoplay {
+    color: #e3001b;
+}
+
+.receitas {
+    color: #8431a6;
+}
+
+.tv-globo {
+    color: #1b92d2;
+}
+
+.main-header {
+    background-color: #5a169a;
+    color: white;
+    padding: 15px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.gshow-logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.center-nav {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.secondary-nav {
+    background-color: #5a169a;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.banner {
+    background-color: #5affaa;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.banner-text {
+    flex: 1;
+}
+
+.banner-title {
+    color: #333;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.banner-subtitle {
+    color: #333;
+    font-size: 16px;
+}
+
+.banner-image {
+    flex: 0 0 150px;
+    text-align: right;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.vote-info {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.vote-info strong {
+    font-weight: bold;
+}
+
+.contestants {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contestant-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contestant-card:hover {
+    border-color: #5a169a;
+}
+
+.contestant-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contestant-image {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.selected {
+    border-color: #5a169a;
+    background-color: rgba(90, 22, 154, 0.05);
+}
+
+.vote-button {
+    display: block;
+    width: 100%;
+    background-color: #5a169a;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.vote-button:hover {
+    background-color: #4a1080;
+}
+
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 28px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .contestant-name {
+        font-size: 18px;
+    }
+}
