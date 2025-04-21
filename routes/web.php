@@ -9,3 +9,5 @@ $router->post('/cadastro', 'AuthController@registerPost');
 
 //Rotas para o usuario
 $router->get('/user/dashboard', 'SiteController@dashboarduser');
+
+$router->get('/paredao', 'ParedaoController@index');
